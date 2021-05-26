@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main h2 {
+    text-align: center;
+    padding: 50px 0 30px;
+}
+
+main form  {
+    display: flex;
+    flex-direction: column;
+}
+
+main form p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.login_panel_container {
+    border-radius: 10px;
+    padding: 0 125px 75px 125px;
+}
+
+main form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    background-color: #3bd4ff;
+}
+
+main form button:hover {
+    background-color: #2ac3ee;
+    cursor: pointer;
+    transition: 0.5s;
+}

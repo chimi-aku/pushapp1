@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block records %}
+
+<p>TOP 5 done push-ups in last 30 days</p>
+<ol>
+    {% for instace in TOP5Last7Days %}
+    <li>{{instace.user.user}} {{instace.sum}}</li>
+    {% endfor %}
+</ol>
+
+<p>TOP 3 series in last 7 days</p>
+<ol>
+    {% for instace in TOP3Last30Days %}
+    <li>{{instace.user.user}} {{instace.count}}</li>
+    {% endfor %}
+</ol>
+
+
+{% endblock %}

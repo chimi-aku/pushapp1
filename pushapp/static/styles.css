@@ -1,0 +1,177 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.not_auth {
+    diplay: flex;
+    height: 100vh;
+}
+
+main.not_auth a {
+    padding: 20px 50px;
+    background-color: #3bd4ff;
+    text-decoration: none;
+    color: white;
+    border-radius: 25px;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    padding: 30px;
+    background-color: #3bd4ff;
+}
+
+.container div {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #3bd4ff;
+    margin-left: 50px;
+}
+
+.container div img{
+    width: 60px;
+}
+
+.container nav {
+    flex-grow: 1;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.container nav ul{
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container nav li{
+    list-style-type: none;
+}
+
+.container nav li a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+.container nav li a:hover{
+    border-bottom: 2px solid #eee;
+    color: #eee;
+}
+
+main .add_pushUp_panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+}
+
+main .add_pushUp_panel form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .add_pushUp_panel form p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .add_pushUp_panel form p label {
+    text-align: center;
+}
+
+main .add_pushUp_panel form input{
+    margin: 5px 0px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #3bd4ff;
+    padding: 10px 20px;
+    color: #3bd4ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main .add_pushUp_panel form input{
+    margin: 5px 0px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid #3bd4ff;
+    padding: 10px 20px;
+    color: #3bd4ff;
+    text-decoration: none;
+    transition: 0.3s;
+    outline: 0px;
+}
+
+main .add_pushUp_panel form .submit-button{
+    margin: 20px 0px;
+}
+
+main .add_pushUp_panel form .submit-button:hover {
+    color: white;
+    background-color: #3bd4ff;
+    cursor: pointer;
+}
+
+main .add_pushUp_panel p:first-child {
+    text-align: center;
+}
+
+main .add_pushUp_panel a {
+    margin: 16px 0px;
+    border-radius: 5px;
+    border: 2px solid #3bd4ff;
+    padding: 10px 20px;
+    color: #3bd4ff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+main .add_pushUp_panel a:hover {
+    color: white;
+    background-color: #3bd4ff;
+}
+
+main .myHistory_panel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 25%;
+    width: 30%;
+}
+
+main .myHistory_panel ul{
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+main .myHistory_panel ul li{
+    padding: 15px 20px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+main .myHistory_panel ul li:nth-child(even){
+    background-color: #eee;
+}
+

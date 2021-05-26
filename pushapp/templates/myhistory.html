@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block history %}
+
+<div class="myHistory_panel">
+    <h2>Here is your history:</h2>
+    <ul>
+        {% for instace in numOfPushUps_list %}
+        <li>On <b>{{instace.date}}</b> you have done: <b>{{instace.numOfPushUps}}</b> push ups!</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}

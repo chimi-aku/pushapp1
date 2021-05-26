@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PushAPP</title>
+
+<!--        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">-->
+        {% load static %}
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        {% load static %}
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{% static 'styles.css' %}">
+        {% endblock stylesheets %}
+    </head>
+
+    <body>
+    {% if user.is_authenticated %}
+        <header class="container">
+            {% load static %}
+            <div><img src="{% static 'push-up.png' %}"></div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                        <li><a href="/">HOME</a></li>
+                        <li><a href="/myhistory">MY HISTORY</a></li>
+                        <li><a href="/records">RECORDS</a></li>
+                        <li><a href="/logout">LOGOUT</a></li>
+                    {% else %}
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <main>
+                {% block home %}
+                {% endblock %}
+                {% block history %}
+                {% endblock %}
+                {% block records %}
+                {% endblock %}
+                {% block add_pushups %}
+                {% endblock %}
+        </main>
+
+        {% else %}
+        <main class="not_auth">
+            <a href="/login">LOG IN</a>
+        </main>
+        {% endif %}
+
+    </body>
+</html>
