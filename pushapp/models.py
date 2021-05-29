@@ -26,6 +26,7 @@ class Person(models.Model):
         return str(self.user)
 
 
+
 class PushUps(models.Model):
     user = models.ForeignKey(Person, on_delete=models.CASCADE, null=True)
     numOfPushUps = IntegerRangeField(min_value=1)

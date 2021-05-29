@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 # Create your views here.
 from django.db.models import Sum, Count
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, timedelta, timezone, date
 
 from .models import Person, PushUps
 from .forms import pushUpForm
@@ -30,9 +30,26 @@ def addPushups(request):
 def home(request):
     # finally it should be display  logged user
     if request.user.is_authenticated:
+
+        loggedUser = request.user.username
+        loggedUserID = request.user.id
+        today = date.today()
+
+        todayPushUps = (PushUps.objects
+                            .filter(user__user__id = loggedUserID)
+                            .filter(date__day = today.day)
+                            .filter(date__month=today.month)
+                            .filter(date__year=today.year)
+                       )
+
+        if todayPushUps:
+            numOfPushUps = todayPushUps[0].numOfPushUps
+        else:
+            numOfPushUps = 0
+
         context = {
-            'username': request.user.id,
-            'numOfPushUps': 0
+            'username': loggedUser,
+            'numOfPushUps': numOfPushUps
         }
     else:
         context = {
@@ -53,13 +70,13 @@ def myhistory(request):
 
     for item in pushapphistory:
         year = item.date.strftime("%Y")
-        print("year:", year)
+        #print("year:", year)
         #month = item.date.strftime("%m")
         #print("month:", month)
         monthname = item.date.strftime('%B')
-        print("month name:", monthname)
+        #print("month name:", monthname)
         day = item.date.strftime("%d")
-        print("day:", day)
+        #print("day:", day)
 
         day = int(day) + 1
         day = str(day)

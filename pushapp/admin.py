@@ -13,7 +13,7 @@ class PersonAdmin(admin.ModelAdmin):
     )
     fields = (
         'user',
-        'age'
+        'age',
     )
 
 admin.site.register(Person, PersonAdmin)
