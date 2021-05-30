@@ -175,3 +175,53 @@ main .myHistory_panel ul li:nth-child(even){
     background-color: #eee;
 }
 
+/* new */
+
+main .records_panel{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 25%;
+    width: 80%;
+}
+
+main .records_panel h2{
+    text-align: center;
+}
+
+main .records_panel div{
+    display: flex;
+}
+
+main .records_panel div div h3{
+    text-align: center;
+}
+
+main .records_panel div div{
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+main .records_panel ol{
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+main .records_panel ol li{
+    padding: 15px 20px;
+    background-color: #ddd;
+    text-align: center;
+}
+
+main .records_panel ol li:nth-child(even){
+    background-color: #eee;
+}
+
+.errorlist {
+    list-style-type: none;
+    color: red;
+    padding: 0;
+}
